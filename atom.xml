@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[菜菜园子]]></title>
   <link href="http://caijinmo.github.io/atom.xml" rel="self"/>
   <link href="http://caijinmo.github.io/"/>
-  <updated>2015-01-12T17:20:53+08:00</updated>
+  <updated>2015-01-12T18:14:27+08:00</updated>
   <id>http://caijinmo.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[蔡锦墨]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[开篇]]></title>
+    <link href="http://caijinmo.github.io/blog/kai-pian.html/"/>
+    <updated>2015-01-12T18:13:42+08:00</updated>
+    <id>http://caijinmo.github.io/blog/kai-pian</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
 </feed>
