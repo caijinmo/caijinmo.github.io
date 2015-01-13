@@ -4,10 +4,10 @@
   <title><![CDATA[菜菜园子]]></title>
   <link href="http://caijinmo.github.io/atom.xml" rel="self"/>
   <link href="http://caijinmo.github.io/"/>
-  <updated>2015-01-12T18:14:27+08:00</updated>
+  <updated>2015-01-13T15:20:54+08:00</updated>
   <id>http://caijinmo.github.io/</id>
   <author>
-    <name><![CDATA[蔡锦墨]]></name>
+    <name><![CDATA[蔡雷]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -18,7 +18,200 @@
     <link href="http://caijinmo.github.io/blog/kai-pian.html/"/>
     <updated>2015-01-12T18:13:42+08:00</updated>
     <id>http://caijinmo.github.io/blog/kai-pian</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<h2 id="blog">为什么会有此Blog</h2>
+<p>这样的经历我已经有过无数次了：一件事情，做的时候查了无数资料，解决了无数小问题，历时几天甚至几周，但是由于没有及时总结，而且这种事情也不是时常需要去做的，所以忽然有一天需要再做一遍的时候，发现还需要经历那些痛苦的历程。</p>
+
+<p>我干过这类事情随便列举如下：<!--more--></p>
+
+<ul>
+  <li>wii的破解</li>
+  <li>jenkins搭建ONB</li>
+  <li>mac系统恢复重装，各种软件、环境</li>
+  <li>git的各种配置</li>
+  <li>vim的各种配置</li>
+  <li>Blog的搭建</li>
+  <li>解决各种小问题的试验性Demo Code</li>
+</ul>
+
+<p>要想避免重复解决（主要是花了大量精力来查找、筛选、实践）问题，应该做到以下两点：</p>
+
+<ol>
+  <li>有个地方可以分类整理堆积经验</li>
+  <li>对于复杂的任务，需要分步完成，每完成一步，及时总结，然后分类整理堆积</li>
+</ol>
+
+<p>这也就是为什么能看到现在这个Blog。</p>
+
+<p>第一次搭建Blog，选择了Octopress + Github免费模式，但是由于自己的名字在Github注册不上（很可能是自己注册过，但是忘记了名字密码匹配）正好宝宝1岁4个月，所以用他的名字注册了个Github，来整理我的经验，呵呵，有效期初步估计能有16年8个月。</p>
+
+<h2 id="octopress--github">Octopress &amp; Github</h2>
+<p>参考了<a href="http://shengmingzhiqing.com/blog/octopress-tutorials-toc.html">生命之氢Blog</a>，里面写的非常详尽，我的目标是：</p>
+
+<p>现有个地方能记录，基本的功能可以方便使用，高级的功能（样式、评论、归档）可以在需要用到的时候再学习、使用、总结。</p>
+
+<h2 id="code">code相关样式</h2>
+
+<ul>
+  <li>然后点击 <code>Create repository</code> 按钮提交。</li>
+  <li>打开终端 (Terminal)，执行以下命令：</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">cd octopress
+</span><span class="line">rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>obj代码</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="objc"><span class="line"><span class="p">[</span><span class="n">rectangle</span> <span class="nl">setX</span><span class="p">:</span> <span class="mi">10</span> <span class="nl">y</span><span class="p">:</span> <span class="mi">10</span> <span class="nl">width</span><span class="p">:</span> <span class="mi">20</span> <span class="nl">height</span><span class="p">:</span> <span class="mi">20</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>codeblock</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Javascript Array Syntax</span><a href="http://www.baidu.com">baidu</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="js"><span class="line"><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h2 id="category">侧边栏显示Category</h2>
+
+<p>http://shengmingzhiqing.com/blog/octopress-lean-modification-5.html/</p>
+
+<p>摘要如下</p>
+
+<p>首先，用如下代码新建文本文件，另存为 <code>category_list_tag.rb</code>，并把这个文件放到 <code>plugins</code> 目录下。</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>plugins/category_list_tag.rb </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class="line">  <span class="k">class</span> <span class="nc">CategoryListTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class="line">      <span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</span><span class="line">      <span class="n">categories</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">registers</span><span class="o">[</span><span class="ss">:site</span><span class="o">].</span><span class="n">categories</span><span class="o">.</span><span class="n">keys</span>
+</span><span class="line">      <span class="n">categories</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">category</span><span class="o">|</span>
+</span><span class="line">        <span class="n">posts_in_category</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">registers</span><span class="o">[</span><span class="ss">:site</span><span class="o">].</span><span class="n">categories</span><span class="o">[</span><span class="n">category</span><span class="o">].</span><span class="n">size</span>
+</span><span class="line">        <span class="n">category_dir</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">registers</span><span class="o">[</span><span class="ss">:site</span><span class="o">].</span><span class="n">config</span><span class="o">[</span><span class="s1">&#39;category_dir&#39;</span><span class="o">]</span>
+</span><span class="line">        <span class="n">category_url</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">category_dir</span><span class="p">,</span> <span class="n">category</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/_|\P{Word}/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/-{2,}/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="p">)</span>
+</span><span class="line">        <span class="n">html</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;li class=&#39;category&#39;&gt;&lt;a href=&#39;/</span><span class="si">#{</span><span class="n">category_url</span><span class="si">}</span><span class="s2">/&#39;&gt;</span><span class="si">#{</span><span class="n">category</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">posts_in_category</span><span class="si">}</span><span class="s2">)&lt;/a&gt;&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span><span class="line">      <span class="k">end</span>
+</span><span class="line">      <span class="n">html</span>
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line"><span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;category_list&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">CategoryListTag</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>然后我们使用如下代码新建 <code>category_list.html</code> 文件，并放到 <code>source/_includes/custom/asides/</code> 文件夹下。</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>source/_includes/custom/asides/category_list.html </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="nt">&lt;section&gt;</span>
+</span><span class="line">  <span class="nt">&lt;h1&gt;</span>Categories<span class="nt">&lt;/h1&gt;</span>
+</span><span class="line">  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;categories&quot;</span><span class="nt">&gt;</span>
+</span><span class="line">    {% category_list %}
+</span><span class="line">  <span class="nt">&lt;/ul&gt;</span>
+</span><span class="line"><span class="nt">&lt;/section&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>最后，我们在 <code>_config.yml</code> 文件中 <code>default_asides:</code> 后面的方括号中，添加一项 <code>custom/asides/category_list.html</code>，放到你喜欢的位置。</p>
+
+<p>如果你的分类名称中有中文，你就会发现这个链接并不能正确指向该分类的页面，那么该怎么办呢？</p>
+
+<p>打开 <code>plugins/category_list_tag.rb</code>，找到如下一行代码：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>plugins/category_list_tag.rb </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="n">html</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;li class=&#39;category&#39;&gt;&lt;a href=&#39;/</span><span class="si">#{</span><span class="n">category_url</span><span class="si">}</span><span class="s2">/&#39;&gt;</span><span class="si">#{</span><span class="n">category</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">posts_in_category</span><span class="si">}</span><span class="s2">)&lt;/a&gt;&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>替换为：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>plugins/category_list_tag.rb </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="n">html</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;li class=&#39;category&#39;&gt;&lt;a href=&#39;/blog/categories/</span><span class="si">#{</span><span class="n">category</span><span class="o">.</span><span class="n">to_url</span><span class="o">.</span><span class="n">downcase</span><span class="si">}</span><span class="s2">/&#39;&gt;</span><span class="si">#{</span><span class="n">category</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">posts_in_category</span><span class="si">}</span><span class="s2">)&lt;/a&gt;&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>完工。</p>
+
+<h2 id="section">自我介绍</h2>
+
+<p>添加<code>aside/about.html</code>文件，内容为
+&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;figcaption&gt;<span>source/_includes/custom/asides/about.html </span>&lt;/figcaption&gt;
+&lt;div class=&#8221;highlight&#8221;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#8221;gutter&#8221;&gt;&lt;pre class=&#8221;line-numbers&#8221;&gt;<span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;<code class="html"><span class="line"><span class="nt">&lt;section&gt;</span>
+</span><span class="line">  <span class="nt">&lt;h1&gt;</span>蔡雷<span class="nt">&lt;/h1&gt;</span>
+</span><span class="line">  <span class="nt">&lt;p&gt;</span>iOS程序员，喜爱音乐，周末和朋友打打星际<span class="nt">&lt;/p&gt;</span>
+</span><span class="line"><span class="nt">&lt;/section&gt;</span>
+</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;</p>
+
+<h2 id="section-1">剩余问题</h2>
+
+<ul>
+  <li class="warning">效果</li>
+  <li>脚注 bigfoot</li>
+</ul>
+
+<h2 id="section-2">一些常用命令</h2>
+
+<ul>
+  <li>查看别人的github.io博客octopress源码</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git branch -f <span class="nb">source </span>origin/source
+</span><span class="line">git checkout <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>octopress命令</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">rake new_post<span class="o">[</span><span class="s2">&quot;Post Title&quot;</span><span class="o">]</span>
+</span><span class="line">rake generate
+</span><span class="line">rake deploy
+</span><span class="line">rake gen_deploy
+</span><span class="line">rake preview
+</span><span class="line">http://localhost:4000/
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
 ]]></content>
   </entry>
   
