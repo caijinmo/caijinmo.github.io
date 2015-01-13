@@ -3,5 +3,147 @@ layout: post
 title: "开篇"
 date: 2015-01-12 18:13:42 +0800
 comments: true
-categories: 
+categories: "杂项"
 ---
+## 为什么会有此Blog
+这样的经历我已经有过无数次了：一件事情，做的时候查了无数资料，解决了无数小问题，历时几天甚至几周，但是由于没有及时总结，而且这种事情也不是时常需要去做的，所以忽然有一天需要再做一遍的时候，发现还需要经历那些痛苦的历程。
+
+我干过这类事情随便列举如下：<!--more-->
+
+* wii的破解
+* jenkins搭建ONB
+* mac系统恢复重装，各种软件、环境
+* git的各种配置
+* vim的各种配置
+* Blog的搭建
+* 解决各种小问题的试验性Demo Code
+
+要想避免重复解决（主要是花了大量精力来查找、筛选、实践）问题，应该做到以下两点：
+
+1. 有个地方可以分类整理堆积经验
+2. 对于复杂的任务，需要分步完成，每完成一步，及时总结，然后分类整理堆积
+
+这也就是为什么能看到现在这个Blog。
+
+第一次搭建Blog，选择了Octopress + Github免费模式，但是由于自己的名字在Github注册不上（很可能是自己注册过，但是忘记了名字密码匹配）正好宝宝1岁4个月，所以用他的名字注册了个Github，来整理我的经验，呵呵，有效期初步估计能有16年8个月。
+
+## Octopress & Github
+参考了[生命之氢Blog](http://shengmingzhiqing.com/blog/octopress-tutorials-toc.html)，里面写的非常详尽，我的目标是：
+
+现有个地方能记录，基本的功能可以方便使用，高级的功能（样式、评论、归档）可以在需要用到的时候再学习、使用、总结。
+
+
+## code相关样式
+
+* 然后点击 <code>Create repository</code> 按钮提交。
+* 打开终端 (Terminal)，执行以下命令：
+
+{% codeblock %}
+cd octopress
+rake setup_github_pages
+{% endcodeblock %} 
+
+* obj代码
+
+{% codeblock lang:objc %}
+[rectangle setX: 10 y: 10 width: 20 height: 20];
+{% endcodeblock %}
+
+* codeblock
+
+{% codeblock Javascript Array Syntax lang:js http://www.baidu.com baidu%}
+var arr1 = new Array(arrayLength);
+var arr2 = new Array(element0, element1, ..., elementN);
+{% endcodeblock %}
+
+## 侧边栏显示Category
+
+http://shengmingzhiqing.com/blog/octopress-lean-modification-5.html/
+
+摘要如下
+
+首先，用如下代码新建文本文件，另存为 ```category_list_tag.rb```，并把这个文件放到 ```plugins``` 目录下。
+
+{% codeblock lang:ruby plugins/category_list_tag.rb %}
+module Jekyll
+  class CategoryListTag < Liquid::Tag
+    def render(context)
+      html = ""
+      categories = context.registers[:site].categories.keys
+      categories.sort.each do |category|
+        posts_in_category = context.registers[:site].categories[category].size
+        category_dir = context.registers[:site].config['category_dir']
+        category_url = File.join(category_dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase)
+        html << "<li class='category'><a href='/#{category_url}/'>#{category} (#{posts_in_category})</a></li>\n"
+      end
+      html
+    end
+  end
+end
+
+Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag){% endcodeblock %}
+
+然后我们使用如下代码新建 ```category_list.html``` 文件，并放到 ```source/_includes/custom/asides/``` 文件夹下。
+
+{% codeblock lang:html source/_includes/custom/asides/category_list.html %}{% raw %}
+<section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    {% category_list %}
+  </ul>
+</section>{% endraw %}{% endcodeblock %}
+
+最后，我们在 ```_config.yml``` 文件中 ```default_asides:``` 后面的方括号中，添加一项 ```custom/asides/category_list.html```，放到你喜欢的位置。
+
+如果你的分类名称中有中文，你就会发现这个链接并不能正确指向该分类的页面，那么该怎么办呢？
+
+打开 ```plugins/category_list_tag.rb```，找到如下一行代码：
+
+{% codeblock lang:ruby plugins/category_list_tag.rb %}
+html << "<li class='category'><a href='/#{category_url}/'>#{category} (#{posts_in_category})</a></li>\n"
+{% endcodeblock %}
+
+替换为：
+
+{% codeblock lang:ruby plugins/category_list_tag.rb %}
+html << "<li class='category'><a href='/blog/categories/#{category.to_url.downcase}/'>#{category} (#{posts_in_category})</a></li>\n"
+{% endcodeblock %}
+
+完工。
+
+## 自我介绍
+
+添加```aside/about.html```文件，内容为
+{% codeblock lang:html source/_includes/custom/asides/about.html %}{% raw %}
+<section>
+  <h1>蔡雷</h1>
+  <p>iOS程序员，喜爱音乐，周末和朋友打打星际</p>
+</section>
+{% endraw %}{% endcodeblock %}
+
+## 剩余问题
+
+* {:.warning}效果
+* 脚注 bigfoot
+
+## 一些常用命令
+
+* 查看别人的github.io博客octopress源码
+
+{% codeblock lang:bash %}
+git branch -f source origin/source
+git checkout source
+{% endcodeblock %}
+
+* octopress命令
+
+{% codeblock lang:bash %}
+rake new_post["Post Title"]
+rake generate
+rake deploy
+rake gen_deploy
+rake preview
+http://localhost:4000/
+{% endcodeblock %}
+
+
