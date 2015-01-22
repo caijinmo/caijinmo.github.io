@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类:笔记 | 菜菜园子]]></title>
+  <link href="http://caijinmo.github.io/blog/categories/bi-ji/atom.xml" rel="self"/>
+  <link href="http://caijinmo.github.io/"/>
+  <updated>2015-01-22T16:47:33+08:00</updated>
+  <id>http://caijinmo.github.io/</id>
+  <author>
+    <name><![CDATA[蔡雷]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Twelve-Factor App]]></title>
+    <link href="http://caijinmo.github.io/blog/the-twelve-factor-app.html/"/>
+    <updated>2015-01-22T15:48:34+08:00</updated>
+    <id>http://caijinmo.github.io/blog/the-twelve-factor-app</id>
+    <content type="html"><![CDATA[<h2 id="the-twelve-factor-app">The Twelve-Factor App</h2>
+<p>仔细读了1，2，3，4，5感觉比较有用，再思考在iOS开发中如何应用，其余的项目看不太懂，理解不了。</p>
+
+<ol>
+  <li>Codebase - one codebase tracked in revision control, many deploys</li>
+</ol>
+
+<p>git codebase deploy version</p>
+
+<ol>
+  <li>Dependencies - explicitly declare and isolate dependencies</li>
+</ol>
+
+<p>CPAN for perl, Rubygems for Ruby, Explicitly</p>
+
+<p>Python : Pip for declaration / Virtualenv for isolation</p>
+
+<p>do NOT rely on the implicit existence of any system tools</p>
+
+<ol>
+  <li>Config - store config in the environment</li>
+</ol>
+
+<p>vary between deploys, group/environments Rails : <code>deployment</code>, <code>test</code>, <code>production</code></p>
+
+<ol>
+  <li>Backing Services - treat backing services as attached resources</li>
+</ol>
+
+<p>DB, Amazon S3, OAuth API, etc</p>
+
+<p>attached and detached to deploys at will, without any code changes</p>
+
+<ol>
+  <li>Build, release, run - strictly separate build and run stages</li>
+</ol>
+
+<p>a release cannot be mutated once it is created, any changes must create a new release</p>
+
+<ol>
+  <li>
+    <p>Processes - execute the app as one or more stateless processes</p>
+  </li>
+  <li>
+    <p>Port binding - export services via port binding</p>
+  </li>
+  <li>
+    <p>Concurrency - scale out via the process model</p>
+  </li>
+  <li>
+    <p>Disposability - maximize robustness with fast startup and graceful shutdown</p>
+  </li>
+  <li>
+    <p>Dev / prod parity - keep development, staging, and production as similar as possible</p>
+  </li>
+  <li>
+    <p>Logs - treat logs as event streams</p>
+  </li>
+  <li>
+    <p>Admin processes - run admin/management tasks as one-off processes</p>
+  </li>
+</ol>
+]]></content>
+  </entry>
+  
+</feed>
